@@ -10,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".patientlogin"></activity>
+        <activity android:name=".doctorlogin" />
+        <activity android:name=".doctorpatient" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,15 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IntroActivity">
-        </activity>
+        <activity android:name=".IntroActivity" />
         <activity
             android:name=".MainActivity"
-            tools:ignore="ExtraText"
-            android:theme="@style/main">
+            android:theme="@style/main"
+            tools:ignore="ExtraText">
             android:name="com.project.perioddiary.MainActivity"
-            android:label="@string/title_activity_intro" >
-        </activity>
+            android:label="@string/title_activity_intro" ></activity>
 
         <meta-data
             android:name="preloaded_fonts"
