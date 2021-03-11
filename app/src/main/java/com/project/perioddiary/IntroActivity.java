@@ -119,7 +119,7 @@ public class IntroActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         firstTimeTrueOrNot.setFirstTimeLaunch(false);
-        startActivity(new Intent(IntroActivity.this, MainActivity.class));
+        startActivity(new Intent(IntroActivity.this, doctorpatient.class));
         finish();
     }
 
