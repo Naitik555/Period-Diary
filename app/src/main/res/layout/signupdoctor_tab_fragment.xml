@@ -93,19 +93,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doctorpassword"
         app:layout_constraintWidth_percent=".8" />
+
     <Button
         android:id="@+id/doctorbutton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
         android:text="signup"
         android:textSize="16sp"
-        android:background="@drawable/button_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias=".8"
-        app:layout_constraintWidth_percent=".8"
-         />
+        app:layout_constraintTop_toBottomOf="@+id/doctorcity"
+        app:layout_constraintVertical_bias=".5"
+        app:layout_constraintWidth_percent=".8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
