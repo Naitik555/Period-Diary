@@ -10,11 +10,14 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LogindoctorTabFragment extends Fragment {
        EditText logdoctoremail;
        EditText logdoctorpassword;
        TextView forgetpassworddoctor;
        Button logindoctor;
+       FirebaseAuth fAuth;
        float v=0;
 
 

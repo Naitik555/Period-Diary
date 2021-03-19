@@ -1,24 +1,38 @@
 package com.project.perioddiary;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-public class SignupdoctorTabFragment extends Fragment {
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.w3c.dom.Text;
+
+public class SignupdoctorTabFragment extends Fragment {
+    public static final String TAG = "TAG";
+    FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
     EditText doctorfullname;
     EditText doctoremail;
     EditText doctormobilnumber;
     EditText doctorpassword;
     EditText doctorcity;
     Button doctorbutton;
-    float v = 0;
 
+    float v = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +44,83 @@ public class SignupdoctorTabFragment extends Fragment {
         doctorpassword = root.findViewById(R.id.doctorpassword);
         doctorcity = root.findViewById(R.id.doctorcity);
         doctorbutton = root.findViewById(R.id.doctorbutton);
+
+
+
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+
+        if (fAuth.getCurrentUser() != null){
+            startActivity(new Intent(getContext(),MainActivity.class));
+        }
+
+
+        doctorbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String demail = doctoremail.getText().toString().trim();
+                String dpassword = doctorpassword.getText().toString().trim();
+                final String dfullname = doctorfullname.getText().toString();
+                final String dmobilenumber    = doctormobilnumber.getText().toString();
+                final String dcity = doctorcity.getText().toString();
+
+                if(TextUtils.isEmpty(demail)){
+                    doctoremail.setError("Email is Required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(dfullname)){
+                    doctorfullname.setError("Full Name is Required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(dcity)){
+                    doctorcity.setError("City is Required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(dpassword)){
+                    doctorpassword.setError("Password is Required.");
+                    return;
+                }
+
+                if(dpassword.length() < 6){
+                    doctorpassword.setError("Password Must be >= 6 Characters");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(dmobilenumber)){
+                    doctormobilnumber.setError("Mobilnumber is Required.");
+                    return;
+                }
+
+                if(dmobilenumber.length() == 10){
+                    doctormobilnumber.setError("Mobilnumber Must be = 10 intigers");
+                    return;
+                }
+
+                fAuth.createUserWithEmailAndPassword(demail,dpassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(getContext(),"User Created",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getContext(),MainActivity.class));
+
+
+
+                        }else {
+                            Toast.makeText(getContext(),"Error !"+ task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
+
+
+                
+
+
+            }
+        });
 
 
         doctorfullname.setTranslationX(800);
