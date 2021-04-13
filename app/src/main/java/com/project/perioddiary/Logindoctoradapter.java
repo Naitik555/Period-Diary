@@ -11,7 +11,7 @@ public class Logindoctoradapter extends FragmentPagerAdapter {
     int totalTabs;
 
     public Logindoctoradapter(FragmentManager fm, Context context, int totalTabs){
-        super(fm);  ;
+        super(fm);
         this.context = context;
         this.totalTabs = totalTabs;
 

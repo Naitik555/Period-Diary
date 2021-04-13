@@ -15,4 +15,5 @@
 
     <style name="main" parent="Theme.AppCompat.Light.DarkActionBar" />
 
+    <style name="AppTheme1" parent = "Theme.AppCompat.Light.NoActionBar" />
 </resources>
