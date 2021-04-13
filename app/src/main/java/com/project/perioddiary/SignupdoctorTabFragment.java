@@ -15,8 +15,11 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.w3c.dom.Text;
@@ -31,6 +34,8 @@ public class SignupdoctorTabFragment extends Fragment {
     EditText doctorpassword;
     EditText doctorcity;
     Button doctorbutton;
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
     float v = 0;
 
@@ -58,11 +63,20 @@ public class SignupdoctorTabFragment extends Fragment {
         doctorbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                rootNode = FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("doctor");
+
                 final String demail = doctoremail.getText().toString().trim();
                 String dpassword = doctorpassword.getText().toString().trim();
                 final String dfullname = doctorfullname.getText().toString();
                 final String dmobilenumber    = doctormobilnumber.getText().toString();
                 final String dcity = doctorcity.getText().toString();
+
+                doctoruserclass doctorhelperClass = new doctoruserclass(demail , dpassword, dfullname , dmobilenumber , dcity);
+                reference.child(dmobilenumber).setValue(doctorhelperClass);
+
+
 
                 if(TextUtils.isEmpty(demail)){
                     doctoremail.setError("Email is Required.");
@@ -94,10 +108,12 @@ public class SignupdoctorTabFragment extends Fragment {
                     return;
                 }
 
-                if(dmobilenumber.length() == 10){
+                if(dmobilenumber.length() == 9){
                     doctormobilnumber.setError("Mobilnumber Must be = 10 intigers");
                     return;
                 }
+
+
 
                 fAuth.createUserWithEmailAndPassword(demail,dpassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -116,7 +132,7 @@ public class SignupdoctorTabFragment extends Fragment {
                 });
 
 
-                
+
 
 
             }
