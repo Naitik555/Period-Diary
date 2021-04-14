@@ -21,6 +21,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import com.project.perioddiary.calendar.CalendarActivity;
+
 public class SignuppatientTabFragment extends Fragment {
     public static final String TAG = "TAG";
     FirebaseAuth fAuth;
@@ -35,9 +37,6 @@ public class SignuppatientTabFragment extends Fragment {
     EditText patientpassword;
     Button patientbutton;
     float v = 0;
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -56,9 +55,12 @@ public class SignuppatientTabFragment extends Fragment {
             startActivity(new Intent(getContext(),MainActivity.class));
         }
 
+
         patientbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
 
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("patient");
@@ -114,8 +116,8 @@ public class SignuppatientTabFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(getContext(),"User Created",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getContext(),MainActivity.class));
 
+                                    startActivity(new Intent(getContext(), CalendarActivity.class));
 
 
                         }else {

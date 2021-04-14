@@ -21,6 +21,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import com.project.perioddiary.calendar.CalendarActivity;
+
 public class LoginpatientTabFragment extends Fragment {
 
     EditText logpatientemail;
@@ -30,7 +32,6 @@ public class LoginpatientTabFragment extends Fragment {
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     float v=0;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class LoginpatientTabFragment extends Fragment {
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+
+
 
         loginpatient.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +81,7 @@ public class LoginpatientTabFragment extends Fragment {
 
                         if(task.isSuccessful()){
                             Toast.makeText(getContext(),"login successfully",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getContext(),MainActivity.class));
+                            startActivity(new Intent(getContext(), CalendarActivity.class));
 
                         }
                         else {
