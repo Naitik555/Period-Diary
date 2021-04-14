@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "661780432355",
+    "firebase_url": "https://period-diary-36ab8-default-rtdb.firebaseio.com",
+    "project_id": "period-diary-36ab8",
+    "storage_bucket": "period-diary-36ab8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661780432355:android:0a6f2c5825e9a3041f0cd6",
+        "android_client_info": {
+          "package_name": "com.project.perioddiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "661780432355-f9ssrd5m9q009umkk40vjcrlkfd0mk57.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.perioddiary",
+            "certificate_hash": "4ad28e7ffaea21e6a587a02981d6d11d9eff4565"
+          }
+        },
+        {
+          "client_id": "661780432355-sgiliq3k5i4r9q6bevgqa4ve1j0divbg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRsSC1i_KP-4yDTU5AANxnMEAqeJuasYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "661780432355-sgiliq3k5i4r9q6bevgqa4ve1j0divbg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
