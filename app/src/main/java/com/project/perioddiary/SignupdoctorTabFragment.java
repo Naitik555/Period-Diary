@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.project.perioddiary.DashBoard.DoctorDash;
 
 import org.w3c.dom.Text;
 
@@ -120,7 +121,7 @@ public class SignupdoctorTabFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(getContext(),"User Created",Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getContext(),MainActivity.class));
+                            startActivity(new Intent(getContext(), DoctorDash.class));
 
 
 

@@ -20,6 +20,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.project.perioddiary.DashBoard.DoctorDash;
 
 public class LogindoctorTabFragment extends Fragment {
        EditText logemaildoctor;
@@ -79,7 +80,7 @@ public class LogindoctorTabFragment extends Fragment {
 
                        if(task.isSuccessful()){
                            Toast.makeText(getContext(),"login successfully",Toast.LENGTH_SHORT).show();
-                           startActivity(new Intent(getContext(),MainActivity.class));
+                           startActivity(new Intent(getContext(), DoctorDash.class));
 
                        }
                        else {

@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import com.project.perioddiary.DashBoard.PatientDash;
 import com.project.perioddiary.calendar.CalendarActivity;
 
 public class SignuppatientTabFragment extends Fragment {
@@ -117,7 +118,7 @@ public class SignuppatientTabFragment extends Fragment {
                         if (task.isSuccessful()){
                             Toast.makeText(getContext(),"User Created",Toast.LENGTH_SHORT).show();
 
-                                    startActivity(new Intent(getContext(), CalendarActivity.class));
+                                    startActivity(new Intent(getContext(), PatientDash.class));
 
 
                         }else {
