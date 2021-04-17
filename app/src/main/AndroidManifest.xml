@@ -12,11 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DoctorRecycler"></activity>
-        <activity android:name=".Question"></activity>
+        <activity android:name=".DashBoard.PatientDash"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".DashBoard.DoctorDash" />
+        <activity android:name=".DoctorRecycler" />
+        <activity android:name=".Question" />
         <activity
             android:name=".calendar.CalendarActivity"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".SignUp.Patient"
             tools:ignore="MissingClass" />
