@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".DashBoard.DoctorDash" />
         <activity android:name=".DoctorRecycler" />
+        <activity android:name=".History.HistoryRecycler" />
+
         <activity android:name=".Question" />
         <activity
             android:name=".calendar.CalendarActivity"
