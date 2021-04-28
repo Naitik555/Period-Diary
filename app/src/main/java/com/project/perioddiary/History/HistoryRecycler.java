@@ -15,8 +15,12 @@ public class HistoryRecycler extends AppCompatActivity {
 
     private static final String TAG = "HistoryRecycler";
 
-    private ArrayList<String> mPatient = new ArrayList<>();
     private ArrayList<String> mPatientNames = new ArrayList<>();
+    private ArrayList<String> date = new ArrayList<>();
+    private ArrayList<String> color = new ArrayList<>();
+    private ArrayList<String> bmi = new ArrayList<>();
+    private ArrayList<String> stresslevel = new ArrayList<>();
+    private ArrayList<String> flowlevel = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +32,26 @@ public class HistoryRecycler extends AppCompatActivity {
 
     private void initImageBitmaps()
     {
-        mPatientNames.add("123456");
-        mPatient.add("ABCDEFGH");
+        mPatientNames.add("ABCDEFGH");
+        date.add("123456");
+        color.add("abcd");
+        bmi.add("123");
+        stresslevel.add("abcd");
+        flowlevel.add("abcd");
 
-        mPatientNames.add("178932654");
-        mPatient.add("QWERTYUIOP");
-
-        mPatientNames.add("129873654");
-        mPatient.add("ZXCVBNM");
+        mPatientNames.add("XYZWERAFD");
+        date.add("1987654");
+        color.add("qwert");
+        bmi.add("456");
+        stresslevel.add("qwer");
+        flowlevel.add("qwer");
 
         initRecyclerView();
     }
     private void initRecyclerView()
     {
         RecyclerView recyclerView = findViewById(R.id.recyclerview1);
-        HistoryRecyclerViewAdapter adapter = new HistoryRecyclerViewAdapter(this,mPatient,mPatientNames);
+        HistoryRecyclerViewAdapter adapter = new HistoryRecyclerViewAdapter(this,mPatientNames, date,color,bmi,stresslevel,flowlevel);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
