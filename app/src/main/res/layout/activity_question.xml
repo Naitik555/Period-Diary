@@ -9,10 +9,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/questioncolor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -25,121 +26,116 @@
             android:textStyle="bold" />
 
         <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:id="@+id/colorgroup"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/bg_btn">
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="190dp"
-                android:layout_gravity="center"
-                android:background="@color/bg_screen1"
-                android:layout_marginRight="0dp"
-                android:columnCount="2"
-                android:orientation="horizontal"
-                android:rowCount="2">
+            <RadioButton
+                android:id="@+id/red"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_screen2"
+                android:backgroundTint="#ff0000"
+                android:checked="false"
+                android:text="COLOR 1"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold">
 
+            </RadioButton>
 
-                <RadioButton
-                    android:id="@+id/red"
-                    android:layout_width="120dp"
-                    android:layout_height="45dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@color/bg_screen2"
-                    android:backgroundTint="#E91E63"
-                    android:text="RED"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold">
+            <RadioButton
+                android:id="@+id/lightred"
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_screen2"
+                android:backgroundTint="#d34949"
+                android:checked="false"
+                android:text="COLOR 2"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold">
 
-                </RadioButton>
+            </RadioButton>
 
-                <RadioButton
-                    android:id="@+id/lightred"
-                    android:layout_width="120dp"
-                    android:layout_height="45dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="50dp"
-                    android:background="@color/bg_screen2"
-                    android:backgroundTint="#E91E63"
-                    android:text="RED"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold">
+            <RadioButton
+                android:id="@+id/redthree"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/bg_screen2"
+                android:backgroundTint="#8e2828"
+                android:checked="false"
+                android:text="COLOR 3"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold">
 
-                </RadioButton>
+            </RadioButton>
 
-                <RadioButton
-                    android:id="@+id/redthree"
-                    android:layout_width="120dp"
-                    android:layout_height="45dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@color/bg_screen2"
-                    android:backgroundTint="#E91E63"
-                    android:text="RED"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold">
+            <RadioButton
+                android:id="@+id/redfour"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_screen2"
+                android:backgroundTint="#c41414"
+                android:checked="false"
+                android:text="COLOR 4"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold">
 
-                </RadioButton>
+            </RadioButton>
 
-                <RadioButton
-                    android:id="@+id/redfour"
-                    android:layout_width="120dp"
-                    android:layout_height="45dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="50dp"
-                    android:background="@color/bg_screen2"
-                    android:backgroundTint="#E91E63"
-                    android:text="RED"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold">
+            <RadioButton
+                android:id="@+id/redfive"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/bg_screen2"
+                android:backgroundTint="#9b3939"
+                android:checked="false"
+                android:text="COLOR 5"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold">
 
-                </RadioButton>
+            </RadioButton>
 
-                <RadioButton
-                    android:id="@+id/redfive"
-                    android:layout_width="120dp"
-                    android:layout_height="45dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@color/bg_screen2"
-                    android:backgroundTint="#E91E63"
-                    android:text="RED"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold">
+            <RadioButton
+                android:id="@+id/redsix"
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/bg_screen2"
+                android:backgroundTint="#ed4d4d"
+                android:checked="false"
+                android:text="COLOR 6"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold">
 
-                </RadioButton>
-
-                <RadioButton
-                    android:id="@+id/redsix"
-                    android:layout_width="120dp"
-                    android:layout_height="45dp"
-                    android:layout_marginLeft="100dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="50dp"
-                    android:background="@color/bg_screen2"
-                    android:backgroundTint="#E91E63"
-                    android:text="RED"
-                    android:textColor="#000"
-                    android:textSize="25dp"
-                    android:textStyle="bold">
-
-                </RadioButton>
-
-            </GridLayout>
+            </RadioButton>
 
         </RadioGroup>
 
         <TextView
+            android:id="@+id/questionbmi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -171,6 +167,7 @@
             android:hint="ENTER WEIGHT" />
 
         <TextView
+            android:id="@+id/questionstress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -183,26 +180,21 @@
             android:textStyle="bold" />
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/stressgroup"
+            android:layout_width="400dp"
+            android:background="@drawable/bg_btn"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
             android:layout_height="wrap_content">
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:layout_gravity="center"
-                android:background="@color/bg_screen1"
-                android:columnCount="2"
-                android:orientation="horizontal"
-                android:rowCount="2">
 
                 <RadioButton
                     android:id="@+id/calm"
                     android:layout_width="100dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
+                    android:checked="false"
                     android:text="CALM"
                     android:textColor="#000"
                     android:textSize="20dp"
@@ -214,10 +206,10 @@
                     android:id="@+id/medium"
                     android:layout_width="120dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
+                    android:checked="false"
                     android:text="MEDIUM"
                     android:textColor="#000"
                     android:textSize="20dp"
@@ -229,10 +221,10 @@
                     android:id="@+id/low"
                     android:layout_width="100dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
+                    android:checked="false"
                     android:text="LOW"
                     android:textColor="#000"
                     android:textSize="20dp"
@@ -244,10 +236,10 @@
                     android:id="@+id/high"
                     android:layout_width="100dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
+                    android:checked="false"
                     android:text="HIGH"
                     android:textColor="#000"
                     android:textSize="20dp"
@@ -255,11 +247,10 @@
 
                 </RadioButton>
 
-            </GridLayout>
-
         </RadioGroup>
 
         <TextView
+            android:id="@+id/questionflow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -272,27 +263,22 @@
             android:textStyle="bold" />
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:id="@+id/flowlevel"
+            android:layout_width="400dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/bg_btn"
             android:layout_height="wrap_content">
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="140dp"
-                android:layout_gravity="center"
-                android:background="@color/bg_screen1"
-                android:columnCount="2"
-                android:orientation="horizontal"
-                android:rowCount="2">
 
                 <RadioButton
                     android:id="@+id/one"
                     android:layout_width="100dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
-                    android:text="CALM"
+                    android:text="GOOD"
+                    android:checked="false"
                     android:textColor="#000"
                     android:textSize="20dp"
                     android:textStyle="bold">
@@ -301,13 +287,13 @@
 
                 <RadioButton
                     android:id="@+id/two"
-                    android:layout_width="120dp"
+                    android:layout_width="140dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
-                    android:text="MEDIUM"
+                    android:text="IRREGULAR"
+                    android:checked="false"
                     android:textColor="#000"
                     android:textSize="20dp"
                     android:textStyle="bold">
@@ -316,13 +302,13 @@
 
                 <RadioButton
                     android:id="@+id/thirth"
-                    android:layout_width="100dp"
+                    android:layout_width="140dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
-                    android:text="LOW"
+                    android:text="MODERATE"
+                    android:checked="false"
                     android:textColor="#000"
                     android:textSize="20dp"
                     android:textStyle="bold">
@@ -333,18 +319,16 @@
                     android:id="@+id/fourth"
                     android:layout_width="100dp"
                     android:layout_height="45dp"
-                    android:layout_gravity="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
                     android:background="@color/bg_screen2"
-                    android:text="HIGH"
+                    android:text="BAD"
+                    android:checked="false"
                     android:textColor="#000"
                     android:textSize="20dp"
                     android:textStyle="bold">
 
                 </RadioButton>
-
-            </GridLayout>
 
         </RadioGroup>
 
@@ -357,12 +341,43 @@
             android:paddingStart="30dp"
             android:gravity="center"
             android:textStyle="bold"
-            android:id="@+id/button"
+            android:id="@+id/answer"
             android:textSize="30dp"
             android:layout_gravity="center_horizontal"
             android:paddingEnd="30dp"
-            android:text="GET YOU ANSWER"
+            android:text="GET YOUR REPORT"
             android:textColor="#000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:id="@+id/report"
+            android:textSize="30dp"
+            android:background="@drawable/bg_btn"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/bg_btn"
+            android:paddingStart="30dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/doctorlist"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingEnd="30dp"
+            android:text="DOCTOR`S LIST"
+            android:textColor="#000" />
+
+
 
     </LinearLayout>
 

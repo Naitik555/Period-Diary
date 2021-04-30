@@ -54,13 +54,10 @@ public class LogindoctorTabFragment extends Fragment {
                 String dpassword = logpassworddoctor.getText().toString().trim();
 
 
-
-
                 if(TextUtils.isEmpty(demail)){
                     logemaildoctor.setError("Email is Required.");
                     return;
                 }
-
 
 
                 if(TextUtils.isEmpty(dpassword)){

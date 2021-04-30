@@ -17,7 +17,7 @@ import com.project.perioddiary.R;
 public class SplashActivity extends AppCompatActivity {
 
     Animation topAnim,bottomAnim;
-    //ImageView image;
+    ImageView image;
     TextView name;
 
     @Override
@@ -29,9 +29,10 @@ public class SplashActivity extends AppCompatActivity {
         topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
         bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
 
-      //  image = findViewById(R.id.imageview);
+          image = findViewById(R.id.image);
           name = findViewById(R.id.name);
 
+          image.setAnimation(topAnim);
           name.setAnimation(bottomAnim);
 
         Thread myThread = new Thread()

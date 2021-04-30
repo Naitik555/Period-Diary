@@ -7,23 +7,12 @@
     android:orientation="vertical"
     android:id="@+id/parent_layout">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginRight="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
-        android:id="@+id/image"
-        android:src="@mipmap/ic_launcher" />
-
     <TextView
         android:id="@+id/doctorname"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
         android:hint="PATIENT NAME"
         android:textSize="25dp"
         android:background="@drawable/bg_btn"

@@ -61,8 +61,6 @@ public class SignuppatientTabFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-
-
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("patient");
 

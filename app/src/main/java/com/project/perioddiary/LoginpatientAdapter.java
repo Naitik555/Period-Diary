@@ -34,8 +34,6 @@ public class LoginpatientAdapter extends FragmentPagerAdapter {
             default:
                 return null;
 
-
-
         }
 
     }

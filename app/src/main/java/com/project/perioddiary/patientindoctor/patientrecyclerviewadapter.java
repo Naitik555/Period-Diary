@@ -1,4 +1,4 @@
-package com.project.perioddiary.RecyclerView;
+package com.project.perioddiary.patientindoctor;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,40 +13,38 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.project.perioddiary.R;
+import com.project.perioddiary.RecyclerView.ReccyclerViewAdapter;
 
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ReccyclerViewAdapter extends RecyclerView.Adapter<ReccyclerViewAdapter.ViewHolder>
-{
+public class patientrecyclerviewadapter extends RecyclerView.Adapter<patientrecyclerviewadapter.ViewHolder> {
     private static final String TAG = "ReccyclerViewAdapter";
 
     private ArrayList<String> mImageNames = new ArrayList<>();
-    private ArrayList<String> mImages = new ArrayList<>();
-    private ArrayList<String> number = new ArrayList<>();
+    //private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
 
-    public ReccyclerViewAdapter(Context mContext, ArrayList<String> mImageNames, ArrayList<String> mImages, ArrayList<String> number) {
+    public patientrecyclerviewadapter(Context mContext, ArrayList<String> mImageNames) {
         this.mImageNames = mImageNames;
-        this.mImages = mImages;
-        this.number = number;
+      //  this.mImages = mImages;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public patientrecyclerviewadapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent,false);
-        ViewHolder holder = new ViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent, false);
+        patientrecyclerviewadapter.ViewHolder holder = new patientrecyclerviewadapter.ViewHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull patientrecyclerviewadapter.ViewHolder holder, int position) {
 
-        Glide.with(mContext).asBitmap().load(mImages.get(position)).into(holder.image);
+       // Glide.with(mContext).asBitmap().load(mImages.get(position)).into(holder.image);
 
         holder.imageName.setText(mImageNames.get(position));
 
@@ -54,7 +52,7 @@ public class ReccyclerViewAdapter extends RecyclerView.Adapter<ReccyclerViewAdap
             @Override
             public void onClick(View view) {
 
-                Toast.makeText(mContext, number.get(position), Toast.LENGTH_LONG).show();
+                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -64,18 +62,18 @@ public class ReccyclerViewAdapter extends RecyclerView.Adapter<ReccyclerViewAdap
         return mImageNames.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder
-    {
-        CircleImageView image;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        //CircleImageView image;
         TextView imageName;
         RelativeLayout parentLayout;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.image);
+            //image = itemView.findViewById(R.id.image);
             imageName = itemView.findViewById(R.id.image_name);
             parentLayout = itemView.findViewById(R.id.parent_layout);
         }
     }
 }
+

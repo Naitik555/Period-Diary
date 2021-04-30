@@ -24,6 +24,7 @@ public class doctorpatient extends AppCompatActivity {
                 startActivity(intent);
             }
             });
+
             ImageView img1 = (ImageView) findViewById(R.id.patient);
         img1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

@@ -24,7 +24,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/threedot"
             app:title="DASHBOARD ACTIVITY" />
 
         <TextView
@@ -41,20 +40,6 @@
             app:layout_constraintEnd_toStartOf="@+id/history"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-        <TextView
-            android:id="@+id/patientname"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:text="Name of Patient"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:background="@color/bg_screen1"
-            app:layout_constraintEnd_toStartOf="@+id/history"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <ImageView
             android:id="@+id/history"
@@ -202,16 +187,16 @@
                         android:id="@+id/four1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/four"
+                        android:layout_below="@id/profile"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="FOUR"
+                        android:text="PROFILE"
                         android:textStyle="bold"
                         android:textColor="#DD000000"
                         android:textSize="24sp"/>
 
                     <ImageView
-                        android:id="@+id/four"
+                        android:id="@+id/profile"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_centerHorizontal="true"
